@@ -1,9 +1,12 @@
-FROM centos:6.6
+FROM ubuntu:latest
+MAINTAINER your_name "email@gmail.com"
+RUN apt-get update -y
+RUN apt-get install -y python-pip python-dev build-essential
 
 # Run the following commands as super user (root):
 USER root
 
-# Create a user that does not have root privileges 
+# Create a user that does not have root privileges
 ARG username=ml
 RUN userdel builder && useradd --create-home --home-dir /home/${username} ${username}
 ENV HOME /home/${username}
