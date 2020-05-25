@@ -9,7 +9,7 @@ RUN apt-get install -y python3-pip build-essential python-dev python-setuptools
 # Create a user that does not have root privileges
 ARG username=ml
 
-RUN if [ $(getent passwd $username) ] ; then userdel -r ${username} && useradd --create-home --home-dir /home/${username} ${username} else useradd --create-home --home-dir /home/${username} ${username} fi 
+RUN useradd --create-home --home-dir /home/${username} ${username} 
 
 ENV HOME /home/${username}
 RUN rm -rf /home/${username}/logs && rm -rf /home/${username}/apps
