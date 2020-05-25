@@ -10,7 +10,7 @@ RUN apt-get install -y python3-pip build-essential python-dev python-setuptools
 ARG username=ml
 
 RUN cat /etc/passwd | grep ${username} >/dev/null 2>&1 \
-    if [ $? -eq 0 ] ; then  \
+    if [ $? -eq 0 ]; then  \
        userdel -r ${username} && useradd --create-home --home-dir /home/${username} ${username} \
     else && \
        useradd --create-home --home-dir /home/${username} ${username}  \
