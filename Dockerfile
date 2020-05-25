@@ -16,6 +16,7 @@ RUN mkdir -p /home/${username}/logs && mkdir -p /home/${username}/apps
 # Switch to our newly created user
 USER ${username}
 
+# Deploy Applicaiton
 COPY ./*  /home/${username}/apps
 
 # Our working directory will be in our home directory where we have permissions
