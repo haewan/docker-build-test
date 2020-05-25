@@ -1,10 +1,11 @@
 FROM ubuntu:latest
 MAINTAINER your_name "email@gmail.com"
-RUN apt-get update -y
-RUN apt-get install -y python-pip python-dev build-essential
 
 # Run the following commands as super user (root):
 USER root
+RUN apt-get update -y
+RUN apt-get install -y python3-setuptools
+RUN easy_install3 pip
 
 # Create a user that does not have root privileges
 ARG username=ml
