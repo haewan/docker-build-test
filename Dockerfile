@@ -21,3 +21,10 @@ COPY ./*  /home/${username}/apps
 
 # Our working directory will be in our home directory where we have permissions
 WORKDIR /home/${username}
+
+#python lib install 
+RUN pip install -r requirements.txt
+
+#Python RUN
+ENTRYPOINT ["python"]
+CMD ["main.py"]
