@@ -12,8 +12,8 @@ ARG username=ml
 RUN if [ $(getent passwd $username) ] ; then \
         userdel -r ${username} && useradd --create-home --home-dir /home/${username} ${username} \  
     else \
-        useradd --create-home --home-dir /home/${username} ${username}  \
-    fi \
+        useradd --create-home --home-dir /home/${username} ${username} \
+    fi
 
 ENV HOME /home/${username}
 RUN rm -rf /home/${username}/logs && rm -rf /home/${username}/apps
