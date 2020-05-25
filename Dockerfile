@@ -4,8 +4,10 @@ MAINTAINER your_name "email@gmail.com"
 # Run the following commands as super user (root):
 USER root
 RUN apt-get update -y
-RUN apt-get install -y python3-setuptools
-RUN easy_install3 pip
+RUN 
+RUN apt-get install -y python3-pip
+RUN apt-get install build-essential python-dev
+RUN apt-get install python-setuptools
 
 # Create a user that does not have root privileges
 ARG username=ml
