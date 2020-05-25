@@ -19,7 +19,7 @@ RUN mkdir -p /home/${username}/logs && mkdir -p /home/${username}/apps
 USER ${username}
 
 # Deploy Applicaiton
-COPY ./*  /home/${username}/apps
+RUN cp -r ./*  /home/${username}/apps
 
 # Our working directory will be in our home directory where we have permissions
 WORKDIR /home/${username}
