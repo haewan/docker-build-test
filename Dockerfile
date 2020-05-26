@@ -25,7 +25,7 @@ COPY .*  /home/${username}/apps/*
 WORKDIR /home/${username}
 
 #python lib install 
-RUN pip3 install -r requirements.txt
+RUN pip3 install -r /home/${username}/apps/requirements.txt
 
 #Python RUN
 ENTRYPOINT ["python"]
