@@ -18,6 +18,8 @@ RUN mkdir -p /home/${username}/logs && mkdir -p /home/${username}/apps
 # Switch to our newly created user
 USER ${username}
 
+WORKDIR  /root/.jenkins/workspace/docker-build/
+
 # Deploy Applicaiton
 COPY /root/.jenkins/workspace/docker-build/requirements.txt  /home/${username}/apps/*
 
