@@ -30,5 +30,5 @@ RUN pip3 install -r /home/${username}/apps/requirements.txt
 EXPOSE 5000
 
 #Python RUN
-ENTRYPOINT ["python"]
+ENTRYPOINT ["python3"]
 CMD ["main.py"]
