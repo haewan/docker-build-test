@@ -19,7 +19,7 @@ RUN mkdir -p /home/${username}/logs && mkdir -p /home/${username}/apps
 USER ${username}
 
 # Deploy Applicaiton
-COPY /root/.jenkins/workspace/docker-build/*  /home/${username}/apps/*
+COPY /root/.jenkins/workspace/docker-build/requirements.txt  /home/${username}/apps/*
 
 # Our working directory will be in our home directory where we have permissions
 WORKDIR /home/${username}
