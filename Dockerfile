@@ -27,6 +27,8 @@ WORKDIR /home/${username}
 #python lib install 
 RUN pip3 install -r /home/${username}/apps/requirements.txt
 
+EXPOSE 8080
+
 #Python RUN
 ENTRYPOINT ["python"]
 CMD ["main.py"]
