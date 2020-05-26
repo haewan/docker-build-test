@@ -22,7 +22,7 @@ USER ${username}
 COPY ./* /home/${username}/apps/
 
 # Our working directory will be in our home directory where we have permissions
-WORKDIR /home/${username}
+WORKDIR /home/${username}/apps/
 
 #python lib install 
 RUN pip3 install -r /home/${username}/apps/requirements.txt
