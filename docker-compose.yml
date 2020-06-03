@@ -4,6 +4,7 @@ services:
    image: localhost:6200/python_app:${JOB_NAME}-${BUILD_ID}-${DATE}
    ports:
      - "8083:5000"
+   command: gunicorn -w 1 -b 0.0.0.0:8000 main:app
 
 #  links:
 #     - redis
