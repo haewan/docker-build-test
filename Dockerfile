@@ -1,4 +1,4 @@
-FROM localhost:6200/ml-engine;letest
+FROM localhost:6200/ml-engine:letest
 MAINTAINER "haewan26@gmail.com"
 
 # Run the following commands as super user (root):
