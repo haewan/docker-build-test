@@ -30,5 +30,5 @@ WORKDIR /home/${username}/apps/
 EXPOSE 5000
 
 #Python RUN
-ENTRYPOINT ["python3"]
-CMD ["main.py"]
+#ENTRYPOINT ["python3"]
+#CMD ["main.py"]
