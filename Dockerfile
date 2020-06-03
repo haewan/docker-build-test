@@ -1,10 +1,10 @@
-FROM ubuntu:latest
-MAINTAINER your_name "haewan26@gmail.com"
+FROM localhost:6200/ml-engine;letest
+MAINTAINER "haewan26@gmail.com"
 
 # Run the following commands as super user (root):
 USER root
-RUN apt-get update -y
-RUN apt-get install -y python3-pip build-essential python-dev python-setuptools
+#RUN apt-get update -y
+#RUN apt-get install -y python3-pip build-essential python-dev python-setuptools
 
 # Create a user that does not have root privileges
 ARG username=ml
@@ -25,7 +25,7 @@ COPY ./* /home/${username}/apps/
 WORKDIR /home/${username}/apps/
 
 #python lib install 
-RUN pip3 install -r /home/${username}/apps/requirements.txt
+#RUN pip3 install -r /home/${username}/apps/requirements.txt
 
 EXPOSE 5000
 
