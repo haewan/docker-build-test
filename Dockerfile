@@ -27,7 +27,7 @@ WORKDIR /home/${username}/apps/
 #python lib install 
 #RUN pip3 install -r /home/${username}/apps/requirements.txt
 
-EXPOSE 5000
+#EXPOSE 5000
 
 #Python RUN
 #ENTRYPOINT ["python3"]
