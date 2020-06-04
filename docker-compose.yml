@@ -15,6 +15,9 @@ services:
         - "80:80"
        links:
          - flask
+       depends_on:
+         - flask
+         
 #    volumes:
 #      - ./conf.d:/etc/nginx/conf.d
 #    depends_on:
