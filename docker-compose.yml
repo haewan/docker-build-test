@@ -14,7 +14,7 @@ services:
        ports:
         - "80:80"
        links:
-         - flask_app
+         - flask
 #    volumes:
 #      - ./conf.d:/etc/nginx/conf.d
 #    depends_on:
