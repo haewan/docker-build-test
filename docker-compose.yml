@@ -1,12 +1,14 @@
 version: "3"
 services:
-    flask_app:
+    flask:
+       container_name: flask_app
        image: localhost:6200/python_app:${JOB_NAME}-${BUILD_ID}-${DATE}
        ports:
           - "8000:8000"
        command: gunicorn -w 1 -b 0.0.0.0:8000 main:app
     
     nginx:
+       container_name: nginx_app 
        image: localhost:6200/nginx:latest
        # restart: always
        ports:
