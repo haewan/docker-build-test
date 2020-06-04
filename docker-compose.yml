@@ -13,8 +13,8 @@ services:
       - "80:80"
 #    volumes:
 #      - ./conf.d:/etc/nginx/conf.d
-    depends_on:
-      - localhost:6200/python_app:${JOB_NAME}-${BUILD_ID}-${DATE}
+#    depends_on:
+#      - localhost:6200/python_app:${JOB_NAME}-${BUILD_ID}-${DATE}
 
 #  links:
 #     - redis
