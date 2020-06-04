@@ -15,7 +15,7 @@ RUN rm -rf /root/logs && rm -rf /root/apps
 RUN mkdir -p /root/logs && mkdir -p /root/apps
 
 # Deploy Applicaiton
-COPY ./* /root
+COPY . /root/
 
 # Our working directory will be in our home directory where we have permissions
 WORKDIR /root
