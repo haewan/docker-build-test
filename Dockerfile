@@ -7,22 +7,18 @@ USER root
 #RUN apt-get install -y python3-pip build-essential python-dev python-setuptools
 
 # Create a user that does not have root privileges
-ARG username=ml
+#ARG username=ml
+#RUN useradd --create-home --home-dir /home/${username} ${username} 
 
-RUN useradd --create-home --home-dir /home/${username} ${username} 
-
-ENV HOME /home/${username}
-RUN rm -rf /home/${username}/logs && rm -rf /home/${username}/apps
-RUN mkdir -p /home/${username}/logs && mkdir -p /home/${username}/apps
-
-# Switch to our newly created user
-USER ${username}
+ENV HOME /root
+RUN rm -rf /root/logs && rm -rf /root/apps
+RUN mkdir -p /root/logs && mkdir -p /root/apps
 
 # Deploy Applicaiton
-COPY ./* /home/${username}/apps/
+COPY ./* /root
 
 # Our working directory will be in our home directory where we have permissions
-WORKDIR /home/${username}/apps/
+WORKDIR /root
 
 #python lib install 
 #RUN pip3 install -r /home/${username}/apps/requirements.txt
