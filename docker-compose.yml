@@ -9,7 +9,7 @@ services:
     
     nginx:
     container_name: nginx
-    image: localhost:6200/latest
+    image: localhost:6200/nginx:latest
    # restart: always
     ports:
       - "80:80"
