@@ -1,4 +1,4 @@
-FROM localhost:6200/ml-engine:latest
+FROM localhost:6000/ml-engine:latest
 MAINTAINER "haewan26@gmail.com"
 
 # Run the following commands as super user (root):
